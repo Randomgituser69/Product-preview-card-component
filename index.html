@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/70c69eb187.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style> 
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    :root {
+      --Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+    }
+    * {  
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif; 
+      box-sizing: border-box; 
+    }  
+    body {
+      padding: 0;
+      margin: 0;
+      display: grid; 
+      font-size: 14px; 
+      box-sizing: border-box; 
+      background-color: var(--Cream);
+    }
+      .product-card {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+        place-content: center; 
+        background-color: var(--White); 
+        width: 400px;
+        border-radius: 10px; 
+        space-between: 100px; 
+        justify-content: center; 
+        align-items: center;
+      }  
+    .product-card button {
+      background-color: var(--Dark-cyan); 
+      color: var(--White); 
+      border-radius: 10px; 
+      padding: 10px; 
+      margin: 10px;
+      width: 170px;
+    }
+    .c-text {
+      padding: 10px;
+    } 
+    .img img {
+      height: px;
+      width: 200px; 
+      border-radius: 5px;
+    }
+    .c-text h2 {
+      font-family: 'Fraun es', serif; 
+      font-style: bold; 
+      font-size: 700;
+    } 
+    .price span {
+      font-family: 'Fraunces', serif; 
+      font-style: Black; 
+      font-size: 900; 
+      color: var(--Dark-cyan)
+    } 
+   button span {
+     font-size: 500; 
+     font-style: Medium;
+     padding: 10px;
+   } 
+    @media screen and  (min-width: 48em) {
+          body {
+      padding: 0;
+      margin: 0;
+      display: flex; 
+      font-size: 14px; 
+      box-sizing: border-box; 
+      background-color: var(--Cream);
+    } 
+      main {
+        flex-direction: row;
+      }
+      .product-card {
+
+        background-color: var(--White); 
+        width: 400px;
+        border-radius: 10px; 
+      }  
+    .product-card button {
+      background-color: var(--Dark-cyan); 
+      color: var(--White); 
+      border-radius: 10px; 
+      padding: 10px; 
+      margin: 10px;
+      width: 170px;
+    }
+    .c-text {
+      padding: 10px;
+    } 
+    .img img {
+    
+    }
+    .c-text h2 {
+      font-family: 'Fraun es', serif; 
+      font-style: bold; 
+      font-size: 700;
+    } 
+    .price span {
+      font-family: 'Fraunces', serif; 
+      font-style: Black; 
+      font-size: 900; 
+      color: var(--Dark-cyan)
+    } 
+   button span {
+     font-size: 500; 
+     font-style: Medium;
+     padding: 10px;
+   } 
+    }
+     </style>
+</head>
+<body>
+  <main>
+  <div class="product-card"> 
+    <div class="img">
+     <picture> 
+       <source srcset="./images/image-product-jpg" media="(max-width: 375px)">
+<img src="image-product-desktop.jpg" alt="picture for desktop"> 
+    </picture>
+    </div> 
+    <div class="c-text">
+      <hgroup>
+  <p class="paragrap">P E R F U M E</p>
+  <h2 inclass="title">Gabrielle Essence Eau De Parfum</h2>
+    </hgroup> 
+  <p class="description">A floral, solar and voluptuousinterpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.</p>
+
+  <p class="price">
+    <span>$149.99</span>
+  <s>$169.99</s>
+    </p>
+  <button>
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span>Add to Cart</span>
+  </button> 
+    </div>
+  </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

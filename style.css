@@ -1,4 +1,4 @@
-/* CSS Reset */ 
+/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -20,8 +20,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -60,9 +60,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -73,86 +73,78 @@ select {
   }
 }
 /* CSS Styles*/
-    :root {
-      --Dark-cyan: hsl(158, 36%, 37%);
---Cream: hsl(30, 38%, 92%);
---Very-dark-blue: hsl(212, 21%, 14%);
---Dark-grayish-blue: hsl(228, 12%, 48%);
---White: hsl(0, 0%, 100%);
-    }
-    * {  
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif; 
-      box-sizing: border-box; 
-    }  
-    body {
-      padding: 0;
-      margin: 0;
-      display: grid;
-      padding-left: center;
-      font-size: 14px; 
-      box-sizing: border-box; 
-      background-color: var(--Cream);
-    } 
-    main {
-      padding: 69px;
-      display: grid;
-      place-self: center;
-    }
-      .product-card {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
-        place-content: center; 
-        background-color: var(--White); 
-        width: 450px; 
-        border-radius: 10px;
-          }  
-    .product-card button {
-      background-color: var(--Dark-cyan); 
-      color: var(--White); 
-      border-radius: 10px; 
-      padding: 10px; 
-      margin: 10px;
-      width: 205px;
-    }
-    .c-text {
-      padding: 10px; 
-      margin: 10px;
-    } 
-    .img img {
-      height: 380px;
-      width: 200px; 
-      border-radius: 5px;
-    } 
-    .c-text h2 {
-      font-family: 'Fraun es', serif; 
-      font-style: bold; 
-      font-size: 700;
-    } 
-    .price span {
-      font-family: 'Fraunces', serif; 
-      font-style: Black; 
-      font-size: 900; 
-      color: var(--Dark-cyan)
-    } 
-   button span {
-     font-weight: 500;
-     font-style: Medium;
-     padding: 10px;
-   } 
-  .attribution {
-    font-weight: 400; 
-    display: block;
-  }
-    @media screen and (max-width: 37.438rem) {
-  .product-card { 
-    display: flex; 
-    flex-direction: column;
-  } 
-      .img img {
-      height: 380px;
-      width: 290px; 
-      border-radius: 5px;
-      }
-    }
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  padding: 15px;
+  background-color: var(--Cream); 
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 29.15rem;
+  overflow: hidden;
+  background-color: var(--White);
+  border-radius: 10px;
+}
+.product-card button {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  border-radius: 10px;
+  padding: 10px;
+  width: 205px;
+}
+.c-text {
+  padding: 15px;
+}
+/*
+.img img {
+  
+} */
+.c-text h2 {
+  font-family: "Fraun es", serif;
+  font-style: bold;
+  font-size: 700;
+}
+.price span {
+  font-family: "Fraunces", serif;
+  font-style: Black;
+  font-size: 900;
+  color: var(--Dark-cyan);
+}
+button span {
+  font-weight: 500;
+  font-style: Medium;
+  padding: 10px;
+}
+.attribution {
+  font-weight: 400;
+  display: block;
+}
+@media screen and (min-width: 37.5rem) {
+  .product-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  } /*
+  .img img {
+    height: 380px;
+    width: 290px;
+
+  } */
+}
